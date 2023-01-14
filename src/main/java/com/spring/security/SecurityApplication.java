@@ -8,17 +8,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 @RequiredArgsConstructor
-public class SecurityApplication implements CommandLineRunner {
-
+public class SecurityApplication {
     public static void main(String[] args) {
         SpringApplication.run(SecurityApplication.class, args);
     }
 
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-    @Override
-    public void run(String... args) throws Exception {
-        bCryptPasswordEncoder.encode("davi");
-        bCryptPasswordEncoder.encode("alice");
-    }
 }
